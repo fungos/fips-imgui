@@ -1,0 +1,22 @@
+# fips-imgui
+---
+
+imports:
+    fips-glfw:
+        git: https://github.com/floooh/fips-glfw.git
+
+run:
+    opengl3_example:
+        cwd: imgui/examples/
+    opengl_example:
+        cwd: imgui/examples/
+    directx11_example:
+        cwd: imgui/examples/
+    directx9_example:
+        cwd: imgui/examples/
+
+exports:
+    header-dirs:
+        - imgui
+    modules:
+        imgui: .
