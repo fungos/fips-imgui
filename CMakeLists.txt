@@ -17,6 +17,9 @@ fips_begin_lib(imgui)
         imconfig.h
         imgui.cpp
         imgui.h
+        imgui_demo.cpp
+        imgui_draw.cpp
+        imgui_internal.h
         stb_rect_pack.h
         stb_textedit.h
         stb_truetype.h
@@ -40,6 +43,7 @@ if (NOT FIPS_IMPORT)
             endif()
 
             if (FIPS_MACOS)
+                fips_frameworks_osx(Cocoa CoreVideo OpenGL)
                 fips_libs(m)
             endif()
         fips_end_app()
@@ -61,6 +65,7 @@ if (NOT FIPS_IMPORT)
             endif()
 
             if (FIPS_MACOS)
+                fips_frameworks_osx(Cocoa CoreVideo OpenGL)
                 fips_libs(m dl)
             endif()
         fips_end_app()
