@@ -11,6 +11,7 @@ if (NOT FIPS_IMPORT)
 endif()
 
 fips_begin_lib(imgui)
+    fips_vs_disable_warnings(4312)   # 'type cast': conversion from 'int' to 'void *' of greater size
     include_directories(imgui)
     fips_dir(imgui)
     fips_files(
